@@ -1,6 +1,6 @@
 name: Run pipeline on GitLab
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   gitlab:
