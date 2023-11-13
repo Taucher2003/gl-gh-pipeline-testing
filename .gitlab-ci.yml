@@ -2,3 +2,4 @@ job:
   script:
     - echo $CI_COMMIT_SHA
     - echo $CI_JOB_ID
+
