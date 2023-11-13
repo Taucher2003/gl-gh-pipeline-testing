@@ -1,0 +1,15 @@
+name: Run pipeline on GitLab
+
+on: [push]
+
+jobs:
+  gitlab:
+    name: Run pipeline on GitLab
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Taucher2003/GitLab-Pipeline-Action@master
+        with:
+          gl-project-id: 52107720
+          gl-runner-token: ${{ secrets.GITLAB_RUNNER_TOKEN }}
+          gl-api-token: ${{ secrets.GITLAB_API_TOKEN }}
+          
