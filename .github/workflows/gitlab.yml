@@ -12,4 +12,9 @@ jobs:
           GL_PROJECT_ID: 52107720
           GL_RUNNER_TOKEN: ${{ secrets.GITLAB_RUNNER_TOKEN }}
           GL_API_TOKEN: ${{ secrets.GITLAB_API_TOKEN }}
+  env:
+    name: Show env
+    runs-on: ubuntu-latest
+    steps:
+      - run: env
           
