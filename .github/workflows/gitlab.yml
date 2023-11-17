@@ -7,7 +7,7 @@ jobs:
     name: Run pipeline on GitLab
     runs-on: ubuntu-latest
     steps:
-      - uses: Taucher2003/GitLab-Pipeline-Action@master
+      - uses: Taucher2003/GitLab-Pipeline-Action@testing
         with:
           gl-project-id: 52107720
           gl-runner-token: ${{ secrets.GITLAB_RUNNER_TOKEN }}
