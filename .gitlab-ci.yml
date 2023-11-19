@@ -1,3 +1,9 @@
 job:
   script:
     - echo $CI_COMMIT_SHA
+    - exit $EXIT_CODE
+
+job2:
+  allow_failure: true
+  script:
+    - echo $EXIT_CODE2
