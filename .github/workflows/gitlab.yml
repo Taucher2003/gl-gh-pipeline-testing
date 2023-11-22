@@ -1,15 +1,17 @@
 name: Run pipeline on GitLab
 
-on: [push]
+on: [push, pull_request_target]
 
 jobs:
   gitlab:
     name: Run pipeline on GitLab
     runs-on: ubuntu-latest
     steps:
-      - uses: Taucher2003/GitLab-Pipeline-Action@testing
+      - uses: Taucher2003/GitLab-Pipeline-Action@16-support-pull-request-target
         with:
           GL_PROJECT_ID: 52107720
           GL_RUNNER_TOKEN: ${{ secrets.GITLAB_RUNNER_TOKEN }}
           GL_API_TOKEN: ${{ secrets.GITLAB_API_TOKEN }}
+          OVERRIDE_GITHUB_SHA: ${{ github.event.pull_request.head.sha }}
+          OVERRIDE_GITHUB_REF_NAME: ${{ github.event.pull_request.head.ref }}
           
