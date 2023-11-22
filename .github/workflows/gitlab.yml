@@ -6,6 +6,7 @@ jobs:
   gitlab:
     name: Run pipeline on GitLab
     runs-on: ubuntu-latest
+    environment: gitlab-pipeline
     steps:
       - uses: Taucher2003/GitLab-Pipeline-Action@16-support-pull-request-target
         with:
